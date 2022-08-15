@@ -12,7 +12,7 @@ library(ggplot2)
 setwd("C:/Users/forev/Documents/Nicolas/karina_thesis/analysis_data/final")
 
 # pull data
-withCOV_nona <- read_csv("t1withCOV_data_voi_nona.csv")
+withCOV_nona <- read_csv("de_ident_t1withCOV_data_voi_nona.csv")
 nona_mcd_anx <- read_csv("noOut_nona_mcd_anx_final.csv")
 nona_mcd_dep <- read_csv("noOut_nona_mcd_dep_final.csv")
 
