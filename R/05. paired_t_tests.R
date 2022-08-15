@@ -14,7 +14,7 @@ library(rstatix)
 setwd("C:/Users/forev/Documents/Nicolas/karina_thesis/analysis_data/final")
 
 # pull data
-withCOV_data <- read_csv("t1withCOV_data_voi_nona.csv") 
+withCOV_data <- read_csv("de_ident_t1withCOV_data_voi_nona.csv") 
 
 # split data into variables
 ## PAS
