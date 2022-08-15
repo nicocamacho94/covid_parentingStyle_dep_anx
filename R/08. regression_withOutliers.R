@@ -12,7 +12,7 @@ library(miceadds)
 setwd("C:/Users/forev/Documents/Nicolas/karina_thesis/analysis_data/final")
 
 # pull data
-withCOV_nona <- read_csv("t1withCOV_data_voi_nona.csv") 
+withCOV_nona <- read_csv("de_ident_t1withCOV_data_voi_nona.csv") 
 
 ##### conduct hierarchical regressions #####
 ## anxiety / authoritative model
