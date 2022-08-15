@@ -11,7 +11,7 @@ library(MASS)
 setwd("C:/Users/forev/Documents/Nicolas/karina_thesis/analysis_data/final")
 
 # pull data
-withCOV_nona_full <- read_csv("t1withCOV_data_voi_nona.csv")
+withCOV_nona_full <- read_csv("de_ident_t1withCOV_data_voi_nona.csv")
 
 # with variables that are going into models, omit NA's, without i2n or LEC
 withCOV_nona <- dplyr::select(withCOV_nona_full, subid, pasTot_T1, pfcTot_T1,
