@@ -7,6 +7,7 @@
 library(tidyverse)
 library(ggeffects)
 library(ggplot2)
+library(ggpubr)
 
 # setwd("X:/Gaffrey/Lab/NTREC/Nicolas/parenting_and_emotreg/analysis_data/final")
 setwd("C:/Users/forev/Documents/Nicolas/karina_thesis/analysis_data/final")
