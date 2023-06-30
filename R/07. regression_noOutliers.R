@@ -1,12 +1,13 @@
 # title: Simple regression analyses - without outliers - Karina's thesis project
 # author: Nicolas L. Camacho
 # date created: 11/7/2021
-# date updated: 3/18/2022
+# date updated: 6/30/2023
 
 # set packages
 library(tidyverse)
 library(lm.beta)
 library(miceadds)
+library(lmtest)
 
 # setwd("X:/Gaffrey/Lab/NTREC/Nicolas/parenting_and_emotreg/analysis_data/final")
 setwd("C:/Users/forev/Documents/Nicolas/karina_thesis/analysis_data/final")
@@ -35,6 +36,11 @@ anx_atv_step3 <- lm(pasTot_cov ~ 1 + pasTot_T1 + pfcTot_cov + negAffect_T1 + epi
 anova(anx_atv_step2, anx_atv_step3)
 summary(lm.beta(anx_atv_step3))
 
+#### Breusch-Pagan Test (residual homoscedasticity)
+bptest(anx_atv_step3)
+#### Kolmogorov-Smirnov Test (residual normality)
+ols_test_normality(anx_atv_step3)
+
 ## depression / authoritative model
 ### null model
 null_dep_authoritative <- lm(pfcTot_cov ~ 1, data = nona_mcd_dep)
@@ -53,6 +59,11 @@ dep_atv_step3 <- lm(pfcTot_cov ~ 1 + pfcTot_T1 + pasTot_cov + negAffect_T1 + epi
                       atvSelf_T1, data = nona_mcd_dep)
 anova(dep_atv_step2, dep_atv_step3)
 summary(lm.beta(dep_atv_step3))
+
+#### Breusch-Pagan Test (residual homoscedasticity)
+bptest(dep_atv_step3)
+#### Kolmogorov-Smirnov Test (residual normality)
+ols_test_normality(dep_atv_step3)
 
 # conduct analyses accounting for family clusters, correcting standard errors
 ## anxiety / authoritative models
