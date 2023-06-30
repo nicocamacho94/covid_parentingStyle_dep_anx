@@ -1,7 +1,7 @@
 # title: Repeated Measures ANOVA - including outliers - Karina's thesis project
 # author: Nicolas L. Camacho
 # date created: 02/04/2021
-# date updated: 07/20/2022
+# date updated: 06/30/2023
 
 # set packages
 library(tidyverse)
@@ -37,6 +37,12 @@ pfc_long <- pfc_withCOV %>% rename(., pfc_base = pfcTot_T1, pfc_covid = pfcTot_c
 pas_t_test <- t_test(score ~ measure, data = pas_long, paired = T) %>% add_significance()
 ## PFC
 pfc_t_test <- t_test(score ~ measure, data = pfc_long, paired = T) %>% add_significance()
+
+# calculate effect size (Cohen's d) for the paired samples t-tests
+## PAS
+pas_d <- cohens_d(score ~ measure, data = pas_long, paired = T)
+## PFC
+pfc_d <- cohens_d(score ~ measure, data = pfc_long, paired = T)
 
 # plot the data for each variable
 ## PAS
