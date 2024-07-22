@@ -6,7 +6,7 @@
 
 ### The analysis scripts were written by Nicolas L. Camacho.
 
-### A link to the manuscript pre-print will be provided once it becomes available.
+### The manuscript associated with this project can be found here: https://www.nature.com/articles/s41598-023-42268-x
 
 ## Questions?
 
